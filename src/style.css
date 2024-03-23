@@ -2,14 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-5xl font-bold tracking-widest leading-none;
+  }
+  h2 {
+    @apply text-4xl font-bold font-montserrat;
+  }
+}
+
 :root {
   @apply bg-white font-heebo;
 }
 
 body {
-  @apply m-0  min-h-screen flex place-items-center;
+  @apply m-0 flex;
 }
 
 #app {
   @apply max-w-1400 mx-auto w-full;
+}
+
+header {
+  @apply flex flex-col lg:flex-row min-h-screen;
+}
+
+.flex-item-left {
+  @apply w-full lg:w-3/5 pt-11 flex flex-col justify-between;
+}
+
+.flex-item-right {
+  @apply w-full lg:w-2/5 max-w-[560px];
+}
+
+nav {
+  @apply flex items-center justify-center;
+}
+
+nav ul {
+  @apply ml-8 flex gap-8 md:gap-16 uppercase font-bold text-sm text-light-pink tracking-wider;
+}
+
+ul li:first-child a {
+  @apply text-black;
+}
+
+.intro {
+  @apply flex items-center justify-between;
+}
+
+.designation {
+  @apply text-sm text-middle-grey font-bold tracking-wider text-opacity-[.33] ml-1 mt-2;
+}
+
+.hire-me-btn {
+  @apply text-white bg-pink uppercase font-bold text-xs leading-18 tracking-wider px-6 py-2 rounded-full;
+}
+
+.social-media {
+  @apply mt-8 flex flex-col gap-6 mr-12;
+}
+
+.social-icons {
+  @apply flex gap-6 mt-10;
+}
+
+.services {
+  @apply flex items-center ml-auto;
+}
+
+.ilustrations-container {
+  @apply relative bg-[url('@images/ilustrations.png')] min-h-337 min-w-389 text-white pl-66 pr-3 py-3;
+}
+
+.photography-container {
+  @apply relative bg-[url('@images/photography.png')] min-h-289 min-w-426 text-white p-3;
+}
+
+.ui-ux-design-container {
+  @apply relative bg-[url('@images/ui-ux-design.png')] bg-cover bg-no-repeat min-h-417 h-full text-white px-39 py-9;
+}
+
+.logo-design-container {
+  @apply relative bg-[url('@images/logo-design.png')] bg-cover bg-no-repeat min-h-214 min-w-500 text-white px-20 py-13;
+}
+
+.overlay-container {
+  @apply absolute top-0 left-0 bg-white/30 w-full h-full;
 }
